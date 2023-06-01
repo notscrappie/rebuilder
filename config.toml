@@ -33,6 +33,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-includin
 [Reddit]
 build-mode = "apk"
 included-patches = "hide-ads hide-subreddit-banner premium-icon-reddit sanitize-sharing-links"
+version = 'auto'
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
 arch = "both"
 
@@ -76,6 +77,6 @@ enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/joaomgcd/tasker/"
 
 [Photomath]
-enabled = true
 included-patches = "unlock-plus"
+version = 'auto'
 apkmonk-dlurl = "https://www.apkmonk.com/app/com.microblink.photomath/"
