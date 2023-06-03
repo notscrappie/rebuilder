@@ -33,9 +33,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-includin
 [Reddit]
 build-mode = "apk"
 included-patches = "hide-ads hide-subreddit-banner premium-icon-reddit sanitize-sharing-links"
-version = 'auto'
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
-arch = "both"
 
 [Messenger]
 enabled = false
