@@ -76,5 +76,4 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/joaomgcd/tasker/"
 
 [Photomath]
 included-patches = "unlock-plus"
-version = 'auto'
 apkmonk-dlurl = "https://www.apkmonk.com/app/com.microblink.photomath/"
