@@ -35,6 +35,11 @@ build-mode = "apk"
 included-patches = "hide-ads hide-subreddit-banner premium-icon-reddit sanitize-sharing-links"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
 
+[Trakt]
+build-mode = "apk"
+included-patches = "unlock-pro"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
+
 [Messenger]
 enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger/"
