@@ -13,7 +13,7 @@ version = "auto"                                                      # 'auto', 
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 
 [Twitter]
-version = "9.98.0"
+version = "9.98.0-release.0"
 excluded-patches="hide-views-stats"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitter-inc/twitter/"
 
@@ -21,13 +21,11 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/twitter-inc/twitter/"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
 
 [TikTok]
-build-mode = "apk"
 excluded-patches = "playback-speed"
 included-patches = "disable-login-requirement downloads feed-filter fix-google-login hide-ads settings show-seekbar sim-spoof"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 
 [Reddit]
-build-mode = "apk"
 included-patches = "hide-ads hide-subreddit-banner premium-icon-reddit sanitize-sharing-links"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
 
