@@ -43,7 +43,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/trakt/trakt"
 [Messenger]
 enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/facebook-2/messenger/"
-arch = "arm64-v8a"
+apkmirror-arch = "arm64-v8a"
 
 [Spotify]
 enabled = false
@@ -52,7 +52,7 @@ uptodown-dlurl = "https://spotify.en.uptodown.com/android"
 [Citra]
 enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/citra-emulator/citra-emulator/"
-arch = "arm64-v8a"
+apkmirror-arch = "arm64-v8a"
 
 [Backdrops]
 enabled = false
@@ -73,7 +73,7 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/smart-launcher-team/icon-pack-s
 [TickTick]
 enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/appest-inc/ticktick-to-do-list-with-reminder-day-planner/"
-arch = "arm64-v8a"
+apkmirror-arch = "arm64-v8a"
 
 [Tasker]
 enabled = false
