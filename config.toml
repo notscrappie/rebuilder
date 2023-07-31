@@ -10,9 +10,7 @@ build-mode = "both"                                                   # 'both', 
 excluded-patches = "comments copy-video-url custom-video-buffer disable-fullscreen-panels disable-player-popup-panels disable-zoom-haptics enable-debugging external-downloads hide-artist-card hide-autoplay-button hide-captions-button hide-email-address hide-endscreen-cards hide-filter-bar hide-info-cards hide-load-more-button hide-player-buttons hide-player-overlay hide-seekbar hide-shorts-components hide-timestamp hide-video-action-buttons navigation-buttons old-quality-layout open-links-externally remove-player-controls-background seekbar-tapping spoof-app-version video-speed"                                                 # space-seperated patches to exclude (multiline strings are not supported)
 included-patches = "client-spoof custom-branding disable-auto-captions disable-shorts-on-startup hdr-auto-brightness hide-ads hide-album-cards hide-breaking-news-shelf hide-cast-button hide-crowdfunding-box hide-floating-microphone-button hide-watch-in-vr hide-watermark minimized-playback premium-heading remember-video-quality return-youtube-dislike sponsorblock swipe-controls tablet-mini-player theme vanced-microg-support video-ads wide-searchbar"                                                 # space-seperated patches to include (non-excluded patches are included by default)
 version = "auto"                                                      # 'auto', 'latest', 'beta' or a custom one like '17.40.41'
-exclusive-patches = false                                             # excludes all patches by default and only applies included-patches
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
-module-prop-name = "ytrv-magisk"
 
 [Twitter]
 build-mode = "apk"
