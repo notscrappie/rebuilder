@@ -71,7 +71,7 @@ get_rv_prebuilts() {
 	local rv_integrations_apk="${integrations_dir}/${rv_integrations_url##*/}"
 	echo "Integrations: $(cut -d/ -f4 <<<"$rv_integrations_url")/$(cut -d/ -f9 <<<"$rv_integrations_url") " >>"$patches_dir/changelog.md"
 
-	rv_patches=$(gh_req "$rv_patches_rel" -)
+	rv_patches=$(gh_req "$rv_patches_rel" -) || return 1
 	rv_patches_changelog=$(json_get 'body' <<<"$rv_patches" | sed 's/\(\\n\)\+/\\n/g')
 	rv_patches_dl=$(json_get 'browser_download_url' <<<"$rv_patches")
 	rv_patches_json="${patches_dir}/patches-$(json_get 'tag_name' <<<"$rv_patches").json"
@@ -261,7 +261,7 @@ get_apkmonk_pkg_name() { grep -oP '.*apkmonk\.com\/app\/\K([,\w,\.]*)' <<<"$1"; 
 patch_apk() {
 	local stock_input=$1 patched_apk=$2 patcher_args=$3 rv_cli_jar=$4 rv_patches_jar=$5 riplib=$6
 	declare -r tdir=$(mktemp -d -p $TEMP_DIR)
-	local cmd="java -jar $rv_cli_jar --temp-dir=$tdir -c -a $stock_input -o $patched_apk -b $rv_patches_jar --keystore=ks.keystore $patcher_args"
+	local cmd="java -jar $rv_cli_jar patch $stock_input -r $tdir -p -o $patched_apk -b $rv_patches_jar --keystore=ks.keystore $patcher_args"
 	if [ "$riplib" = true ]; then cmd+=" --rip-lib x86_64 --rip-lib x86"; fi
 	if [ "$OS" = Android ]; then cmd+=" --custom-aapt2-binary=${TEMP_DIR}/aapt2"; fi
 	pr "$cmd"
@@ -307,10 +307,10 @@ build_rv() {
 		) || get_latest_ver=true
 	elif isoneof "$version_mode" latest beta; then
 		get_latest_ver=true
-		p_patcher_args+=("--experimental")
+		p_patcher_args+=("-f")
 	else
 		version=$version_mode
-		p_patcher_args+=("--experimental")
+		p_patcher_args+=("-f")
 	fi
 	if [ $get_latest_ver = true ]; then
 		local apkmvers uptwodvers aav
